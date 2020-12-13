@@ -6,12 +6,6 @@ import { MdClose } from 'react-icons/md';
 import { isIos, isInStandaloneMode } from './utils';
 
 class AddToHomescreen extends Component {
-  propTypes = {
-    onAddToHomescreenClick: PropTypes.func,
-    title: PropTypes.string,
-    icon: PropTypes.string,
-  };
-
   state = {
     bannerVisible: true,
   };
@@ -49,5 +43,11 @@ class AddToHomescreen extends Component {
     );
   }
 }
+
+AddToHomescreen.propTypes = {
+  onAddToHomescreenClick: PropTypes.func,
+  title: PropTypes.string,
+  icon: PropTypes.string,
+};
 
 export default AddToHomescreen;

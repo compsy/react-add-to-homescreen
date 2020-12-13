@@ -97,8 +97,8 @@ module.exports = (function(t) {
           if (!(t instanceof a))
             throw new TypeError('Cannot call a class as a function');
         })(this, a);
-        for (var c = arguments.length, e = Array(c), i = 0; i < c; i++)
-          e[i] = arguments[i];
+        for (var c = arguments.length, e = Array(c), v = 0; v < c; v++)
+          e[v] = arguments[v];
         return (
           (r = n = o(
             this,
@@ -107,11 +107,6 @@ module.exports = (function(t) {
               [this].concat(e),
             ),
           )),
-          (n.propTypes = {
-            onAddToHomescreenClick: v.default.func,
-            title: v.default.string,
-            icon: v.default.string,
-          }),
           (n.state = { bannerVisible: !0 }),
           (n.onAddToHomescreenClick = function() {
             n.props.onAddToHomescreenClick();
@@ -192,7 +187,12 @@ module.exports = (function(t) {
         a
       );
     })();
-    a.default = l;
+    (l.propTypes = {
+      onAddToHomescreenClick: v.default.func,
+      title: v.default.string,
+      icon: v.default.string,
+    }),
+      (a.default = l);
   },
   function(t, a, r) {
     var n = r(3);
